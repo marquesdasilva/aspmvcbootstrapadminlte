@@ -7,5 +7,4 @@ Enjoy
 
 Screenshots
 =============
-
-abc
+![alt tag](https://github.com/marquesdasilva/aspmvcbootstrapadminlte//master/Screenshots/adminlte_1.png)
