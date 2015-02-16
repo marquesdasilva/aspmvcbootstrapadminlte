@@ -371,11 +371,9 @@
     <Content Include="Content\img\user-bg.png" />
     <Content Include="Content\img\user.jpg" />
     <Content Include="Content\img\user2.jpg" />
-    <Content Include="empty.html" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="Scripts\AdminLTE\app.js" />
     <Content Include="Scripts\AdminLTE\dashboard.js" />
     <Content Include="Scripts\AdminLTE\demo.js" />
@@ -583,7 +581,6 @@
     <Content Include="Content\fonts\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="Content\fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\fonts\font-awesome\scss\_variables.scss" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Scripts\plugins\slimScroll\slimScroll.jquery.json" />
