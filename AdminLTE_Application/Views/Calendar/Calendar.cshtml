@@ -1,7 +1,7 @@
 ﻿
   <!-- fullCalendar -->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.css" rel="stylesheet" type="text/css" />
-<link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
+  <!-- fullCalendar -->
+@Styles.Render("~/Content/css/calendar")
 
 <!-- Right side column. Contains the navbar and content of the page -->
 <aside class="right-side">
@@ -80,10 +80,7 @@
     </section><!-- /.content -->
 </aside><!-- /.right-side -->
 
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.min.js" type="text/javascript"></script>
-
+@Scripts.Render("~/bundles/Calendar")
 
 <script type="text/javascript">
             $(function() {
@@ -120,7 +117,7 @@
                 var d = date.getDate(),
                         m = date.getMonth(),
                         y = date.getFullYear();
-                $('#calendar').fullCalendar({
+                $('div#calendar').fullCalendar({
                     header: {
                         left: 'prev,next today',
                         center: 'title',

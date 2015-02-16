@@ -12,5 +12,35 @@ namespace AdminLTE_Application.Controllers
         {
             return View();
         }
+
+        public ActionResult Invoice()
+        {
+            return View();
+        }
+
+        public ActionResult NotFound()
+        {
+            return View();
+        }
+
+        public ActionResult Error()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        public ActionResult Lockscreen()
+        {
+            return View();
+        }
     }
 }

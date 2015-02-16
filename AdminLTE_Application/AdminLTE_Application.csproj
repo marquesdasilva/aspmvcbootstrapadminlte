@@ -169,7 +169,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Charts.cs" />
-    <Compile Include="Controllers\Examples.cs" />
     <Compile Include="Controllers\Forms.cs" />
     <Compile Include="Controllers\Mailbox.cs" />
     <Compile Include="Controllers\Pages.cs" />
@@ -193,6 +192,8 @@
     <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
     <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\calendar\fullCalendar.css" />
+    <Content Include="Content\css\calendar\fullCalendarPrint.css" />
     <Content Include="Content\css\colorpicker\bootstrap-colorpicker.css" />
     <Content Include="Content\css\colorpicker\bootstrap-colorpicker.min.css" />
     <Content Include="Content\css\datatables\dataTables.bootstrap.css" />
@@ -339,6 +340,9 @@
     <Content Include="Content\css\morris\morris.css" />
     <Content Include="Content\css\timepicker\bootstrap-timepicker.css" />
     <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Content\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\ajax-loader1.gif" />
     <Content Include="Content\img\avatar.png" />
@@ -381,6 +385,7 @@
     <Content Include="Scripts\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Scripts\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Scripts\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
+    <Content Include="Scripts\plugins\calendar\fullcalendar.min.js" />
     <Content Include="Scripts\plugins\colorpicker\bootstrap-colorpicker.js" />
     <Content Include="Scripts\plugins\colorpicker\bootstrap-colorpicker.min.js" />
     <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.js" />
@@ -547,11 +552,41 @@
     <Content Include="Content\less\timeline.less" />
     <Content Include="Content\less\vars.less" />
     <Content Include="composer.json" />
+    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\font-awesome\less\animated.less" />
+    <Content Include="Content\fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\fonts\font-awesome\less\core.less" />
+    <Content Include="Content\fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\fonts\font-awesome\less\icons.less" />
+    <Content Include="Content\fonts\font-awesome\less\larger.less" />
+    <Content Include="Content\fonts\font-awesome\less\list.less" />
+    <Content Include="Content\fonts\font-awesome\less\mixins.less" />
+    <Content Include="Content\fonts\font-awesome\less\path.less" />
+    <Content Include="Content\fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\fonts\font-awesome\less\stacked.less" />
+    <Content Include="Content\fonts\font-awesome\less\variables.less" />
+    <Content Include="Content\fonts\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_core.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_list.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_path.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\fonts\font-awesome\scss\_variables.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Scripts\plugins\slimScroll\slimScroll.jquery.json" />
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Calendar\Calendar.cshtml" />
     <Content Include="Views\Pages\Empty.cshtml" />
     <Content Include="Views\Mailbox\Mailbox.cshtml" />
@@ -559,13 +594,6 @@
     <Content Include="Views\Charts\Morris.cshtml" />
     <Content Include="Views\Charts\Inline.cshtml" />
     <Content Include="Views\Charts\Flot.cshtml" />
-    <Content Include="Views\Examples\Register.cshtml" />
-    <Content Include="Views\Examples\Login.cshtml" />
-    <Content Include="Views\Examples\404.cshtml" />
-    <Content Include="Views\Examples\500.cshtml" />
-    <Content Include="Views\Examples\Blank.cshtml" />
-    <Content Include="Views\Examples\Invoice.cshtml" />
-    <Content Include="Views\Examples\Lockscreen.cshtml" />
     <Content Include="Views\Forms\Advanced.cshtml" />
     <Content Include="Views\Forms\Editors.cshtml" />
     <Content Include="Views\Forms\General.cshtml" />
@@ -576,6 +604,13 @@
     <Content Include="Views\UI\Buttons.cshtml" />
     <Content Include="Views\UI\General.cshtml" />
     <Content Include="Views\UI\Icons.cshtml" />
+    <Content Include="Views\Pages\Invoice.cshtml" />
+    <Content Include="Views\Pages\Error.cshtml" />
+    <Content Include="Views\Pages\NotFound.cshtml" />
+    <Content Include="Views\Pages\Login.cshtml" />
+    <Content Include="Views\Pages\Register.cshtml" />
+    <Content Include="Views\Pages\Lockscreen.cshtml" />
+    <Content Include="Scripts\plugins\calendar\moment.min.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

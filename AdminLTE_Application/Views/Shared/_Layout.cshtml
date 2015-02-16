@@ -6,11 +6,9 @@
     @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-
     @Styles.Render("~/Content/css/bootstrap")
-    @Styles.Render("~/Content/css/AdminLTE")
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
+    @Styles.Render("~/Content/css/AdminLTE") 
+    <link href="@Url.Content("~/Content/fonts/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
 
     @Styles.Render("~/Content/css/bootstrap-slider")
     @Styles.Render("~/Content/css/bootstrap-wysihtml5")
@@ -29,9 +27,6 @@
     @Scripts.Render("~/bundles/jqueryui")
 
     @Scripts.Render("~/bundles/AdminLTE")
-
-   
-
 </head>
 
 <body class="skin-blue">
@@ -313,88 +308,88 @@
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                    <li class="active">
+                    <li id="dashboard" class="active">
                         <a href="@Url.Action("Index", "Home")">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
+                    <li id="widgets">
                         <a href="@Url.Action("Widgets", "Widgets")">
                             <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                         </a>
                     </li>
-                    <li class="treeview">
+                    <li id="charts" class="treeview">
                         <a href="#">
                             <i class="fa fa-bar-chart-o"></i>
                             <span>Charts</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i id="charts_arrow" class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="@Url.Action("Morris", "Charts")"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                            <li><a href="@Url.Action("Flot", "Charts")"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                            <li><a href="@Url.Action("Inline", "Charts")"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                        <ul class="treeview-menu" id="charts_menu">
+                            <li id="charts_morris"><a href="@Url.Action("Morris", "Charts")"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                            <li id="charts_flot"><a href="@Url.Action("Flot", "Charts")"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                            <li id="charts_inline"><a href="@Url.Action("Inline", "Charts")"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                         </ul>
                     </li>
-                    <li class="treeview">
+                    <li id="uielements" class="treeview">
                         <a href="#">
                             <i class="fa fa-laptop"></i>
                             <span>UI Elements</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i id="uielements_arrow" class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="@Url.Action("General", "UI")"><i class="fa fa-angle-double-right"></i> General</a></li>
-                            <li><a href="@Url.Action("Icons", "UI")"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                            <li><a href="@Url.Action("Buttons", "UI")"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                            <li><a href="@Url.Action("Sliders", "UI")"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                            <li><a href="@Url.Action("Timeline", "UI")"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                        <ul class="treeview-menu" id="uielements_menu">
+                            <li id="uielements_general"><a href="@Url.Action("General", "UI")"><i class="fa fa-angle-double-right"></i> General</a></li>
+                            <li id="uielements_icons"><a href="@Url.Action("Icons", "UI")"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                            <li id="uielements_buttons"><a href="@Url.Action("Buttons", "UI")"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                            <li id="uielements_sliders"><a href="@Url.Action("Sliders", "UI")"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                            <li id="uielements_timeline"><a href="@Url.Action("Timeline", "UI")"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                         </ul>
                     </li>
-                    <li class="treeview">
+                    <li id="forms" class="treeview">
                         <a href="#">
                             <i class="fa fa-edit"></i> <span>Forms</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i id="forms_arrow" class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="@Url.Action("General", "Forms")"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                            <li><a href="@Url.Action("Advanced", "Forms")"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                            <li><a href="@Url.Action("Editors", "Forms")"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                        <ul class="treeview-menu" id="forms_menu">
+                            <li id="forms_general"><a href="@Url.Action("General", "Forms")"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                            <li id="forms_advanced"><a href="@Url.Action("Advanced", "Forms")"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                            <li id="forms_editors"><a href="@Url.Action("Editors", "Forms")"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                         </ul>
                     </li>
-                    <li class="treeview">
+                    <li id="tables" class="treeview">
                         <a href="#">
                             <i class="fa fa-table"></i> <span>Tables</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i id="tables_arrow" class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="@Url.Action("Simple", "Tables")"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                            <li><a href="@Url.Action("Data", "Tables")"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                        <ul class="treeview-menu" id="tables_menu">
+                            <li id="tables_simple"><a href="@Url.Action("Simple", "Tables")"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                            <li id="tables_datatables"><a href="@Url.Action("Data", "Tables")"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li id="calendar">
                         <a href="@Url.Action("Calendar", "Calendar")">
                             <i class="fa fa-calendar"></i> <span>Calendar</span>
                             <small class="badge pull-right bg-red">3</small>
                         </a>
                     </li>
-                    <li>
+                    <li id="mailbox">
                         <a href="@Url.Action("Mailbox", "Mailbox")">
                             <i class="fa fa-envelope"></i> <span>Mailbox</span>
                             <small class="badge pull-right bg-yellow">12</small>
                         </a>
                     </li>
-                    <li class="treeview">
+                    <li id="examples" class="treeview">
                         <a href="#">
                             <i class="fa fa-folder"></i> <span>Examples</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i id="examples_arrow" class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                            <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                            <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                            <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                            <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                            <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                        <ul class="treeview-menu" id="examples_menu">
+                            <li id="examples_invoice"><a href="@Url.Action("Invoice", "Pages")"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                            <li id="examples_login"><a href="@Url.Action("Login", "Pages")"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                            <li id="examples_register"><a href="@Url.Action("Register", "Pages")"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                            <li id="examples_lockscreen"><a href="@Url.Action("Lockscreen", "Pages")"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                            <li id="examples_notfound"><a href="@Url.Action("NotFound", "Pages")"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                            <li id="examples_error"><a href="@Url.Action("Error", "Pages")"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                            <li id="examples_empty"><a href="@Url.Action("Empty", "Pages")"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -405,38 +400,6 @@
         @RenderBody()
        
     </div><!-- ./wrapper -->
-    <!-- add new calendar event modal -->
-
- 
-
-        @*
-             @Scripts.Render("~/bundles/raphael")
-        @Scripts.Render("~/bundles/morris")
-        @Scripts.Render("~/bundles/sparkline")
-        @Scripts.Render("~/bundles/jvectormap")
-
-        @Scripts.Render("~/bundles/datatables")
-
-
-
-        @Scripts.Render("~/bundles/bootstrap-slider")
-        @Scripts.Render("~/bundles/bootstrap-wysihtml5")
-        @Scripts.Render("~/bundles/colorpicker")
-
-        @Scripts.Render("~/bundles/datepicker")
-        @Scripts.Render("~/bundles/daterangepicker")
-        @Scripts.Render("~/bundles/flot")
-        @Scripts.Render("~/bundles/iCheck")
-        @Scripts.Render("~/bundles/input-mask")
-        @Scripts.Render("~/bundles/ionslider")
-        @Scripts.Render("~/bundles/jqueryKnob")
-
-        @Scripts.Render("~/bundles/misc")
-
-        @Scripts.Render("~/bundles/slimScroll")
-
-        @Scripts.Render("~/bundles/timepicker")
-        *@
-
+   
 </body>
 </html>

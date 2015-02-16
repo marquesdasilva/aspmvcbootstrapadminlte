@@ -89,8 +89,9 @@ namespace AdminLTE_Application
             bundles.Add(new ScriptBundle("~/bundles/AdminLTE_Dashboard").Include(
                "~/Scripts/AdminLTE/dashboard.js"));
 
-
-
+            bundles.Add(new ScriptBundle("~/bundles/Calendar").Include(
+               "~/Scripts/plugins/calendar/moment.min.js",
+               "~/Scripts/plugins/calendar/fullcalendar.min.js"));
 
 
             bundles.Add(new StyleBundle("~/Content/css/AdminLTE").Include(
@@ -132,6 +133,10 @@ namespace AdminLTE_Application
             
             bundles.Add(new StyleBundle("~/Content/css/timepicker").Include(
                       "~/Content/css/timepicker/bootstrap-timepicker.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css/calendar").Include(
+                     "~/Content/css/plugins/calendar/fullCalendar.css",
+                     "~/Content/css/plugins/calendar/fullCalendarPrint.css"));
              
         }
     }
